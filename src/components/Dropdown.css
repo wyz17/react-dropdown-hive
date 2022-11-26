@@ -1,0 +1,147 @@
+.dd-wrapper {
+  display: flex;
+  height: 50px;
+  min-width: 30%;
+  width: auto;
+  flex-wrap: wrap;
+  border-color: #0080ff;
+  border-radius: 5px;
+  border-style: solid;
+  margin: 20px;
+  position: relative;
+}
+
+.dd-content-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.dd-content-header::before {
+  content: attr(title);
+  position: absolute;
+  left: 12%;
+  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  padding: 0 5px;
+  color: #0080ff;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.dd-content {
+  cursor: pointer;
+  width: 100%;
+}
+
+.dd-content-title {
+  float: left;
+  text-align: left;
+  width: 82%;
+  font-size: 20px;
+  height: 100%;
+
+  white-space: nowrap;
+  overflow-x: scroll;
+  float: left;
+  overflow-y: hidden;
+}
+
+.dd-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+}
+
+.dd-content-title-hidden {
+  margin: 15px;
+}
+
+.dd-content-select-all {
+  width: 10%;
+}
+
+img {
+  position: absolute;
+  width: 25px;
+  top: 30%;
+}
+
+.arrow-top {
+  border: 8px solid grey;
+  width: 0px;
+  height: 0px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  top: 25%;
+}
+
+.arrow-bottom {
+  border: 8px solid grey;
+  width: 0px;
+  height: 0px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  top: 45%;
+}
+
+.dd-list {
+  background-color: #f9f9f9;
+  display: block;
+  position: absolute;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  padding: 0;
+  width: 100%;
+  top: 50%;
+  z-index: 100;
+
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dd-list-item {
+  display: flex;
+  padding: 20px 10px 15px 10px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.dd-list-item-selected {
+  display: flex;
+  padding: 20px 10px 15px 10px;
+  justify-content: space-between;
+  background: #f0f8ff;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+input[type='checkbox'] {
+  zoom: 150%;
+  margin-right: 5%;
+  margin-left: 0;
+}
+
+button {
+  display: flex;
+  background-color: inherit;
+  font-size: 20px;
+  margin: 5px;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.single-select {
+  visibility: hidden;
+  width: 0;
+}
